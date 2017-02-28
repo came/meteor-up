@@ -8,7 +8,9 @@
   },
   "scripts": {
     "prepublish": "nofat make",
-    "test": "nofat test",
+    "test": "bash ./tests/run.sh",
+    "test:custom-server": "nofat test",
+    "test:parallel": "bash ./tests/run-parallel.sh",
     "lint": "eslint ."
   },
   "repository": {
