@@ -11,6 +11,6 @@ services:
   - docker
 
 before_script:
-  - echo 'DOCKER_OPTS="--storage-driver=devicemapper"' |  tee --append /etc/default/docker >/dev/null && service docker restart
+  - echo 'DOCKER_OPTS="--storage-driver=devicemapper"' | sudo tee --append /etc/default/docker >/dev/null && service docker restart
 
 script: npm run test:parallel
