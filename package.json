@@ -11,7 +11,8 @@
     "test": "bash ./tests/run.sh",
     "test:custom-server": "nofat test",
     "test:parallel": "bash ./tests/run-parallel.sh",
-    "lint": "eslint ."
+    "lint": "eslint . && npm run lint:defaultConfig -s",
+    "lint:defaultConfig": "eslint --ext=\".sample\" -c .eslintrc.yml --rule=\"comma-dangle: 0\" ."
   },
   "repository": {
     "type": "git",
